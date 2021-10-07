@@ -1,0 +1,7 @@
+*.idea
+*.xml
+*.iml
+.idea/Ansible-QT.iml
+.idea/Ansible-QT.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/modules.xml
