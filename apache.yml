@@ -1,10 +1,10 @@
 ---
-- name: to install the apche server
+- name: Install apache and php
   hosts: all
   become: yes
   tasks:
-    - name: install apache
+    - name: install apache2
       apt:
-          name: apache2
-          update_cahe: yes
-          state: present
+        name: apache2
+        update_cache: yes
+        state: present
