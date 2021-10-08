@@ -1,0 +1,10 @@
+---
+- name: to install the apche server
+  hosts: all
+  become: yes
+  tasks:
+    - name: install apache
+      apt:
+        - name:
+          update_cahe: yes
+          state: present
