@@ -20,12 +20,12 @@
     - name: Create info.php file
       copy:
         dest: /var/www/html/info.php
-        remote_src: yes
         content: |
           <?php
           phpinfo();
           ?>
-        notify: Start Apache Service
+        notify:
+          - Start Apache Service
 
   handlers:
     - name: Start Apache Service
