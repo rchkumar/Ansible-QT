@@ -11,7 +11,8 @@
 
     - name: Install PHP modules
       apt:
-        - php
-        - libapache2-mod-php
-        - php-mysql
-      state: present
+        name:
+          - php
+          - libapache2-mod-php
+          - php-mysql
+        state: present
