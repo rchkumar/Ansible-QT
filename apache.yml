@@ -19,14 +19,12 @@
 
     - name: Create info.php file
       copy:
-        become: yes
         dest: /var/www/html/info.php
-
         content: |
           <?php
           phpinfo();
           ?>
-        notify:
+      notify:
           - Start Apache Service
 
   handlers:
