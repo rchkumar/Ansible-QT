@@ -20,6 +20,7 @@
     - name: Create info.php file
       copy:
         dest: /var/www/html/info.php
+        remote_src: yes
         content: |
           <?php
           phpinfo();
