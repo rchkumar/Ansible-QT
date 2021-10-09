@@ -16,6 +16,7 @@
           - libapache2-mod-php
           - php-mysql
         state: present
+
     - name: Create info.php file
       copy:
         dest: /var/www/html/info.php
@@ -23,3 +24,8 @@
           <?php
           phpinfo();
           ?>
+    - name: Start Apache service
+      service:
+         name: apache2
+         enabled: yes
+         state : restarted
