@@ -2,6 +2,6 @@
   hosts: all
   tasks:
     - name: this task will shutdown the redhat/centos machines
-      debug:
-        msg: hi
-      when: ansible_facts["ansible_distribution_version"] == "20.04"
+      ansible.builtin.shell: echo "motd contains the word hi"
+      when:
+       - ansible_distribution_version == "20.04"
