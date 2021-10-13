@@ -2,5 +2,6 @@
   hosts: all
   tasks:
     - name: this task will shutdown the redhat/centos machines
-      command: /sbin/shutdown -t now
-      when: ansible_facts["ansible_os_family"] == "RedHat"
+      debug:
+        msg: hi
+      when: ansible_facts["ansible_distribution_version"] == "20.04"
