@@ -3,8 +3,8 @@
     - package:
         name: "httpd"
         state: absent
-      when ansible_facts["os_name"] == "RedHat"
+      when: ansible_facts["os_name"] == "RedHat"
     - package:
         name: "apache2"
         state: absent
-      when ansible_facts["os_name"] == "Ubuntu"
+      when: ansible_facts["os_name"] == "Ubuntu"
