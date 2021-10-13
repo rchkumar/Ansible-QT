@@ -4,9 +4,9 @@
         name: "httpd"
         state: absent
       when:
-       - ansible_facts["os_name"] == "RedHat"
+       - ansible_os_name == "RedHat"
     - package:
         name: "apache2"
         state: absent
       when:
-       - ansible_facts["os_name"] == "Ubuntu"
+       - ansible_os_name == "Ubuntu"
